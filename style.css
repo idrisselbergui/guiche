@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    margin: 20px;
+}
+.main .container{
+    /* display: none; */
+
+}
+.main .container ,.main .pagePassword{
+    background: linear-gradient(30deg, rgba(1, 69, 212, 1) 0%, rgba(29, 147, 253, 1) 43%, rgba(0, 252, 186, 1) 100%);
+    width: 86vh;
+    min-height: 80vh;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main .container h2,.main .pagePassword h2 {
+    font-size: 2.2em;
+    margin-top: 2.2em;
+    text-transform: capitalize;
+    color: #fffffff3;
+}
+
+.main .container .input h4 {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 35px;
+}
+
+.main .container .input span {
+    border-radius: 30px;
+    display: inline-block;
+    width: 15rem;
+    height: 12px;
+    border: 1.6px solid #fffffff3;
+    margin: 13px;
+}
+
+.main .container .credit_card {
+    background-color: #FFFFFF;
+    border: 1px solid #0000001a;
+    border-radius: .25rem;
+    box-shadow: #00000005 0 1px 3px 0;
+    color: #000000d9;
+    cursor: pointer;
+    padding: 7.5px 35px;
+    transition: all 250ms;
+}
+
+.main .container .credit_card:hover,
+.main .container .credit_card:focus {
+    border-color: #00000026;
+    box-shadow: #0000001a 0 4px 12px;
+    color: #000000a6;
+}
+.main .container .credit_card:active {
+    background-color: #F0F0F1;
+    border-color: #00000026;
+    box-shadow: #0000000f 0 2px 4px;
+    color: #000000a6;
+    transform: translateY(1px);
+    padding: 7.5px 36px;
+}
+
+.pagePassword .number .template{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: 10px auto;
+}
+.pagePassword .number .template .box{
+    font-size: 17px;
+    text-align: center;
+    margin: 10px;
+    color: #fff;
+    font-size:1.3em;
+    flex-basis: calc(40% / 2);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 3px;
+    border-radius: 3px;
+    transition: all 200ms ease-out;
+}
+.pagePassword .number .template .box:hover{
+    background-color: #ffffff37;
+}
+
+.main .pagePassword {
+    text-align: center;
+}
+
+.main .pagePassword .showPass{
+    position: relative;
+    padding: 8px 10px;
+    width: 20em;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+#valid{
+    padding: 8px;
+    width: 9em;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: lightseagreen;
+    border: none;
+    text-transform: capitalize;
+    font-size: 17px;
+    color: #fff;
+}
+.hid_pass{
+    display: flex;
+    position: relative;
+    justify-content: left;
+align-content: flex-start;
+left: 150px;
+}

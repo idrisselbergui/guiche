@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ATM</title>
+</head>
+
+<body >
+    <main class="main">
+        <div class="container" id="container">
+            <h2>welcome back to the bank</h2>
+            <div class="input">
+                <h4>insert your card to begin</h4>
+                <span></span>
+            </div>
+                <button class="credit_card" onclick="display()">Done</button>
+        </div>
+        <div class="pagePassword" id="pagePassword" >
+            <h2>enter password :</h2>
+             
+                <input type="password" class="showPass" name="password" id="pass_form" />
+                <div class="number">
+                    <div class="template">
+                        <section class="box" onclick="Show(7)">7</section>
+                        <section class="box" onclick="Show(8)">8</section>
+                        <section class="box" onclick="Show(9)">9</section>
+                        <section class="box" onclick="Show(4)">4</section>
+                        <section class="box" onclick="Show(5)">5</section>
+                        <section class="box" onclick="Show(6)">6</section>
+                        <section class="box" onclick="Show(3)">3</section>
+                        <section class="box" onclick="Show(2)">2</section>
+                        <section class="box" onclick="Show(7)">1</section>
+                        <section class="box" onclick="Show(0)">0</section>
+                    </div>
+                     <button type="button" id="valid" onclick="validation()" >valid</button><div class="hid_pass"><input type="checkbox" name="" id="check" onclick="check_etat()"> Show Password</div> 
+                  
+                    <span id="error"></span>
+                </div>
+        </div>
+        
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
