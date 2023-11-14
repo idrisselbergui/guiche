@@ -23,7 +23,7 @@ body {
     /* display: none; */
 
 }
-.main .container ,.main .pagePassword ,.pagemontant{
+.main .container ,.main .pagePassword ,.pagemontant,.recu_container{
     background: linear-gradient(30deg, rgba(1, 69, 212, 1) 0%, rgba(29, 147, 253, 1) 43%, rgba(0, 252, 186, 1) 100%);
     width: 86vh;
     min-height: 80vh;
@@ -33,12 +33,13 @@ body {
     margin-top: 10px;
 }
 
-.main .container h2,.main .pagePassword h2{
+.main .container h2,.main .pagePassword h2,.recu_head{
     font-size: 2.2em;
     margin-top: 2.2em;
     text-transform: capitalize;
     color: #fffffff3;
 }
+
 .pagemontant h2{
     font-size: 2.2em;
    
@@ -177,6 +178,39 @@ body {
     align-items: center;
     gap: 50px;
 }
-#pageautremontant ,#pagemontant,#pagePassword{
+#pageautremontant ,#pagemontant,#pagePassword,#recu{
      display: none; 
+}
+.input_img{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.input_img img{
+    margin-left: 10px;
+}
+.FL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+H3{
+    font-size: 23px;
+    color: aliceblue;
+}
+.recu{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-items: center;
+}
+.recu div{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
 }

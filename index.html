@@ -20,8 +20,10 @@
         </div>
         <div class="pagePassword" id="pagePassword" >
             <h2>enter password :</h2>
-             
+             <div class="input_img">
                 <input type="password" class="showPass" name="password" id="pass_form" />
+                <img src="remove.png" id="pass_delete" onclick="pass_delete_fun()" width="20px" height="20px">
+            </div>
                 <div class="number">
                     <div class="template">
                         <section class="box" onclick="Show(7)">7</section>
@@ -47,24 +49,28 @@
             <H2 id="mont"></H2>
             <div class="dv_montant">
                 <div class="montanleft">
-                    <button class="btn_montant" id="" onclick="montant(100)">100</button>
-                    <button class="btn_montant" id="" onclick="montant(500)">500</button>
-                    <button class="btn_montant" id="" onclick="montant(2000)">2000</button>
-                    <button class="btn_montant" id="" onclick="montant(4000)">4000</button>
+                    <button class="btn_montant" id="" onclick="take(100)">100</button>
+                    <button class="btn_montant" id="" onclick="take(500)">500</button>
+                    <button class="btn_montant" id="" onclick="take(2000)">2000</button>
+                    <button class="btn_montant" id="" onclick="take(4000)">4000</button>
                 </div>
                 <div class="montanright">
-                    <button class="btn_montant" id="" onclick="montant(200)">100</button>
-                    <button class="btn_montant" id="" onclick="montant(1000)">500</button>
-                    <button class="btn_montant" id="" onclick="montant(1500)">2000</button>
+                    <button class="btn_montant" id="" onclick="take(200)">200</button>
+                    <button class="btn_montant" id="" onclick="take(1000)">1000</button>
+                    <button class="btn_montant" id="" onclick="take(1500)">1500</button>
                     <button class="btn_montant" id="" onclick="autre_montant_button()">Autre montant</button>
                 </div>
             </div>
+            <span id="error2"></span>
             
         
         </div>
         <div class="pagemontant" id="pageautremontant" >
             <h2>enter un montant :</h2>
-            <input type="text" class="new_montant" name="new_montant" id="new_montant" />
+            <div class="input_img">
+              <input type="text" class="new_montant" name="new_montant" id="new_montant" />
+              <img src="remove.png" id="montant_delete" width="20px" onclick="montant_delete_fun()" height="20px">
+            </div>
             <div class="template">
                 <section class="box" onclick="autre_montant(7)">7</section>
                 <section class="box" onclick="autre_montant(8)">8</section>
@@ -77,30 +83,28 @@
                 <section class="box" onclick="autre_montant(7)">1</section>
                 <section class="box" onclick="autre_montant(0)">0</section>
             </div>
+            <div class="FL">
             <button type="button" id="validmontant" onclick="validation_montant()" >valid</button>
                   
             <span id="error_montant"></span>
-            
+            </div>
         </div>
         
-        <div class="recu" id="recu" >
-            <h2>Recu:</h2>
-            <div class="template">
-                <section class="box">7</section>
-                <section class="box">8</section>
-                <section class="box">9</section>
-                <section class="box">4</section>
-                <section class="box">5</section>
-                <section class="box">6</section>
-                <section class="box">3</section>
-                <section class="box">2</section>
-                <section class="box">1</section>
-                <section class="box">0</section>
+        <div class="recu_container" id="recu" >
+            <h2 class="recu_head">Recu:</h2>
+            <div class="recu">
+                <div>
+                    <H2 class="mont2"> You take :</H2>
+                    <H3 class="" id="taking">  </H2>
+                </div>
+                <div>
+                    <H2 class="mont2"> votre nouvel balance est:</H2>
+                    <H3 class="" id="new_balance"> </H2>
+                </div>
             </div>
-            <button type="button" id="validmontant" onclick="validation_montant()" >valid</button>
-                  
-            <span id="error_montant"></span>
             
+                <button type="button" id="validmontant" onclick="Quitter()" >Quitter</button>
+                <span id="error_montant"></span>
         </div>
     </main>
     <script src="script.js"></script>

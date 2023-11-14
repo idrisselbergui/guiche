@@ -1,9 +1,16 @@
 var pass_input=document.getElementById("pass_form");
 var new_montant=document.getElementById("new_montant");
 var error= document.getElementById("error");
+var error_montants= document.getElementById("error2");
+var error_montant_autre= document.getElementById("error_montant");
 var montant_pass=[["123456",1000],["0000",4500]]
+var recu=document.getElementById("recu");
+var recu_tirer=document.getElementById("taking");
+var recu_balance=document.getElementById("new_balance");
+var pass_delete=document.getElementById("pass_delete");
+var montant_delete=document.getElementById("montant_delete");
 var montant;
-
+var tirer;
 
 function validation(){
 
@@ -20,17 +27,14 @@ function validation(){
  }
 
 function check_pass(pass){
-        if(montant_pass[0][0]===pass){
-            montant=montant_pass[0][1];
+    for(i=0;i<montant_pass.length;i++){
+        if(montant_pass[i][0]===pass){
+            montant=montant_pass[i][1];
             console.log(montant)
             return true;
         }
-        else if(montant_pass[1][0]===pass){
-            montant=montant_pass[1][1];
-            console.log(montant)
-            return true;
-        }
-    
+        
+    }
 }
 function Show(num){
    if(pass_input.textContent.length<=6){
@@ -62,6 +66,7 @@ function autre_montant(num){
     new_montant.value=new_montant.textContent;
  }
  function autre_montant_button(){
+   
     document.getElementById("pagemontant").style.display="none";
     document.getElementById("pageautremontant").style.display="block";
 
@@ -69,8 +74,42 @@ function autre_montant(num){
 
 
  function validation_montant(){
+    if(Number(new_montant.value)<=montant){
+        take(new_montant.value);
+        error_montant_autre.innerHTML="";
+        error_montants.innerHTML="";
+        
+    }else{
+        error_montant_autre.innerHTML="you have just "+montant+" DH the montant u need is "+(Number(new_montant.value)-montant)+" DH";
+    }
+ }
+ function take(para){
+    error_montant_autre.innerHTML="";
+    error_montants.innerHTML="";
+    if(Number(para)<=montant){
+        tirer=para;
+        montant-=tirer;
+        document.getElementById("pagemontant").style.display="none";
+        document.getElementById("pageautremontant").style.display="none";
+        recu.style.display="block";
+        recu_tirer.innerHTML=tirer + " DH";
+        recu_balance.innerHTML=montant + " DH";
+        
+    }else{
+        error_montants.innerHTML="you have just "+montant+" DH the montant u need is "+(Number(para)-montant)+" DH"
+    }
+    document.getElementById("mont").innerHTML=montant;
+ }
+ function pass_delete_fun(){
+    pass_input.value=""
+    pass_input.textContent=""
+ }
+ function montant_delete_fun(){
+    new_montant.textContent="";
+    new_montant.value="";
 
  }
- function montant(montant){
-
+ function Quitter(){
+    document.getElementById("pagemontant").style.display="block";
+        recu.style.display="none";
  }
