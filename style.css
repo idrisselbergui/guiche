@@ -23,7 +23,7 @@ body {
     /* display: none; */
 
 }
-.main .container ,.main .pagePassword{
+.main .container ,.main .pagePassword ,.pagemontant{
     background: linear-gradient(30deg, rgba(1, 69, 212, 1) 0%, rgba(29, 147, 253, 1) 43%, rgba(0, 252, 186, 1) 100%);
     width: 86vh;
     min-height: 80vh;
@@ -33,13 +33,23 @@ body {
     margin-top: 10px;
 }
 
-.main .container h2,.main .pagePassword h2 {
+.main .container h2,.main .pagePassword h2{
     font-size: 2.2em;
     margin-top: 2.2em;
     text-transform: capitalize;
     color: #fffffff3;
 }
-
+.pagemontant h2{
+    font-size: 2.2em;
+   
+    text-transform: capitalize;
+    color: #fffffff3;
+}
+.pagemontant #mont{
+    font-size: 1.2em;
+    text-transform: capitalize;
+    color: #fffffff3;
+}
 .main .container .input h4 {
     font-size: 1em;
     color: #fff;
@@ -82,7 +92,7 @@ body {
     padding: 7.5px 36px;
 }
 
-.pagePassword .number .template{
+ .template{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -90,7 +100,7 @@ body {
     width: 40%;
     margin: 10px auto;
 }
-.pagePassword .number .template .box{
+ .box{
     font-size: 17px;
     text-align: center;
     margin: 10px;
@@ -103,7 +113,7 @@ body {
     border-radius: 3px;
     transition: all 200ms ease-out;
 }
-.pagePassword .number .template .box:hover{
+ .box:hover{
     background-color: #ffffff37;
 }
 
@@ -111,7 +121,7 @@ body {
     text-align: center;
 }
 
-.main .pagePassword .showPass{
+.main .pagePassword .showPass,.new_montant{
     position: relative;
     padding: 8px 10px;
     width: 20em;
@@ -119,7 +129,7 @@ body {
     border: none;
     outline: none;
 }
-#valid{
+#valid,#validmontant{
     padding: 8px;
     width: 9em;
     text-align: center;
@@ -131,10 +141,42 @@ body {
     font-size: 17px;
     color: #fff;
 }
+#error{
+    color: red;
+}
 .hid_pass{
     display: flex;
     position: relative;
     justify-content: left;
-align-content: flex-start;
-left: 150px;
+    align-content: flex-start;
+    left: 150px;
+}
+.btn_montant{
+    border: none;
+    color:aliceblue;
+    font-size: 20px;
+    background: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;    
+}
+.dv_montant{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    
+}
+.montanleft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.montanright{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+#pageautremontant ,#pagemontant,#pagePassword{
+     display: none; 
 }

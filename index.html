@@ -32,7 +32,7 @@
                         <section class="box" onclick="Show(6)">6</section>
                         <section class="box" onclick="Show(3)">3</section>
                         <section class="box" onclick="Show(2)">2</section>
-                        <section class="box" onclick="Show(7)">1</section>
+                        <section class="box" onclick="Show(1)">1</section>
                         <section class="box" onclick="Show(0)">0</section>
                     </div>
                      <button type="button" id="valid" onclick="validation()" >valid</button><div class="hid_pass"><input type="checkbox" name="" id="check" onclick="check_etat()"> Show Password</div> 
@@ -40,7 +40,48 @@
                     <span id="error"></span>
                 </div>
         </div>
+        <div class="pagemontant" id="pagemontant" >
+            
+            <h2>enter un montant :</h2>
+            <h2>Balance</h2>
+            <H2 id="mont"></H2>
+            <div class="dv_montant">
+                <div class="montanleft">
+                    <button class="btn_montant" id="" onclick="montant(100)">100</button>
+                    <button class="btn_montant" id="" onclick="montant(500)">500</button>
+                    <button class="btn_montant" id="" onclick="montant(2000)">2000</button>
+                    <button class="btn_montant" id="" onclick="montant(4000)">4000</button>
+                </div>
+                <div class="montanright">
+                    <button class="btn_montant" id="" onclick="montant(200)">100</button>
+                    <button class="btn_montant" id="" onclick="montant(1000)">500</button>
+                    <button class="btn_montant" id="" onclick="montant(1500)">2000</button>
+                    <button class="btn_montant" id="" onclick="autre_montant_button()">Autre montant</button>
+                </div>
+            </div>
+            
         
+        </div>
+        <div class="pagemontant" id="pageautremontant" >
+            <h2>enter un montant :</h2>
+            <input type="text" class="new_montant" name="new_montant" id="new_montant" />
+            <div class="template">
+                <section class="box" onclick="autre_montant(7)">7</section>
+                <section class="box" onclick="autre_montant(8)">8</section>
+                <section class="box" onclick="autre_montant(9)">9</section>
+                <section class="box" onclick="autre_montant(4)">4</section>
+                <section class="box" onclick="autre_montant(5)">5</section>
+                <section class="box" onclick="autre_montant(6)">6</section>
+                <section class="box" onclick="autre_montant(3)">3</section>
+                <section class="box" onclick="autre_montant(2)">2</section>
+                <section class="box" onclick="autre_montant(7)">1</section>
+                <section class="box" onclick="autre_montant(0)">0</section>
+            </div>
+            <button type="button" id="validmontant" onclick="validation_montant()" >valid</button>
+                  
+            <span id="error_montant"></span>
+            
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
